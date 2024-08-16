@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  /* COLORS */
+  --primary-color: #8750f7;
+  --secondary-color: rgba(28,20,5,0.775);
+  --text-color: #f8f7ff;
+  --muted-color: #9fa5a5;
+  --white-color: #fefcfb;
+  --off-white-color: #f6f3fc;
+  --success-color: #aaf683;
+  --ui-color-1: #010101;
+  --ui-color-2: #181919;
+
+  /* BORDERS */
+  --gray-border: solid 0.5px lightgray;
+  --border-radius-small: 4px;
+  --border-radius-medium: 0.8rem;
+  --border-radius-large: 1.2rem;
+  --border-radius-xlarge: 2rem;
+  --border-radius-circle: 51px;
+
+  /* OTHERS */
+  --card-color-rgb: 180, 185, 188;
+  --card-border-color-rgb: 131, 134, 135;
+  --gradient-1: linear-gradient(
+    260deg,
+    var(--secondary-color) 0%,
+    var(--primary-color) 100%
+  );
+  --transition: all 400ms ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scrollbar-color: var(--primary-color) var(--secondary-color);
+  scrollbar-width: thin;
+  outline: 0;
+  list-style: none;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar-thumb {
+  border-radius: 1ex;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.75);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  color: var(--text-color);
+  background: var(--ui-color-1);
+  scroll-behavior: smooth;
+}
+
+/* TYPOGRAPHY */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+
+.primary-title {
+  font-size: 56px;
+  font-weight: 900;
+  margin: 20px 0;
+  background: linear-gradient(
+    to right,
+    var(--primary-color) 0%,
+    var(--white-color) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.color-primary {
+  color: var(--primary-color);
+}
+
+.text-muted {
+  color: var(--muted-color);
+}
+
+.stroke-text {
+  -webkit-text-stroke: 0.5px rgba(212, 212, 214, 0.175);
+  -webkit-text-fill-color: transparent;
+}
+
+a {
+  display: block;
+  color: var(--text-color);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+img {
+  min-height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* BUTTONS */
+.btn {
+  font-family: "Noto Sans", sans-serif;
+  padding: 15px 25px;
+  border-radius: var(--border-radius-circle);
+  color: var(--text-color);
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  background: var(--ui-color-2);
+  text-align: center;
+  cursor: pointer;
+  border: none;
+}
+
+
+.btn-primary {
+  background: var(--gradient-1);
+  color: var(--white-color);
+  background-size: 200% auto;
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  background-position: right center;
+}
+
+/* SECTIONS */
+.section-wrapper {
+  margin: auto;
+  max-width: 1190px;
+  padding: 80px 20px;
+}
+
+.section-header {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.section-header.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.section-header.center .primary-title,
+.section-header.center .description {
+  text-align: center;
+}
+
+.section-header.center .description {
+  max-width: 900px;
+}
+
+/* ICONS */
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius-circle);
+  cursor: pointer;
+  transition: var(--transition);
+  color: var(--muted-color);
+  width: 2.5rem;
+  aspect-ratio: 1/1;
+}
+
+.icon-container:hover {
+  transform: scale(1.2);
+  background: var(--ui-color-2);
+  color: var(--white-color);
+}
+
+/* EFFECTS (BLUR) */
+.blur-effect {
+  position: relative;
+}
+
+.blur-effect::before {
+  content: "";
+  position: absolute;
+  width: 322px;
+  height: 308px;
+  background: var(--primary-color);
+  background: linear-gradient(
+    190deg,
+    var(--primary-color) 0%,
+    rgba(115, 67, 210, 0) 100%
+  );
+  filter: blur(150px);
+  z-index: -1;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 1110px) {
+  .primary-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .section-header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .section-header .primary-title,
+  .section-header .description {
+    text-align: center;
+  }
+
+  .section-header .description {
+    margin: auto;
+    text-align: center;
+  }
+}
