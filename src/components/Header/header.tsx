@@ -1,5 +1,52 @@
 import "./header.css";
+import header1 from "../../assets/Header/header-1.png";
 
 export const Header = () => {
-  return <div></div>;
+  return (
+    <header id="header" className="header header--blur-effect">
+      <div className="header__intro-text header__intro-text--stroke">HELLO</div>
+      <div className="header__container section-wrapper">
+        <div className="header__intro-column header__column header__column--blur-effect">
+          <div className="header__info">
+            <div className="header__info-top">
+              Hello there! I'm
+              <span className="header__info-name color-primary">
+                {" "}
+                Fátima Azevedo
+              </span>
+            </div>
+            <div className="header__info-middle">
+              <h1 className="header__title primary-title">
+                I'M A <br /> FRONT-END DEV
+              </h1>
+              <p className="header__description text-muted">
+                I specialize in crafting intuitive user experiences that combine
+                thoughtful design with technical precision.
+              </p>
+            </div>
+            <div className="header__info-bottom">
+              <button className="header__button btn btn-primary">
+                Download CV
+              </button>
+              <a
+                href="mailto:fatimaalvesa10@gmail.com"
+                className="header__button btn btn-primary"
+              >
+                Email Me
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="header__profile-column header__column">
+          <div className="header__profile-photo-container">
+            <img
+              src={header1}
+              className="header__profile-photo"
+              alt="Profile"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+  );
 };
