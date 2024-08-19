@@ -1,5 +1,6 @@
 import "./header.css";
 import header1 from "../../assets/Header/header-1.png";
+import { Facts } from "./facts";
 
 export const Header = () => {
   return (
@@ -24,10 +25,9 @@ export const Header = () => {
                 thoughtful design with technical precision.
               </p>
             </div>
+            <Facts />
             <div className="header__info-bottom">
-              <button className="btn btn--primary">
-                Download CV
-              </button>
+              <button className="btn btn--primary">Download CV</button>
               <a
                 href="mailto:fatimaalvesa10@gmail.com"
                 className="btn btn--primary"
