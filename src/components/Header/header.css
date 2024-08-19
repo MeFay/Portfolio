@@ -83,10 +83,6 @@
   gap: 30px;
 }
 
-.header__button {
-  display: inline-block;
-}
-
 .header__profile-photo-container {
   width: 400px;
   max-width: 100%;
@@ -103,6 +99,51 @@
   width: 100%;
   height: 50%;
   background: linear-gradient(transparent, var(--ui-color-1));
+}
+
+@media (min-width: 1100px) {
+  .header__title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 850px) {
+  .header {
+    min-height: auto;
+  }
+
+  .header--blur-effect::before {
+    display: none;
+  }
+
+  .header__container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .header__intro-text {
+    font-size: 100px;
+  }
+
+  .header__intro-column {
+    width: 100%;
+  }
+
+  .header__title,
+  .header__info-top,
+  .header__description {
+    text-align: center;
+  }
+
+  .header__info-bottom {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .header__info-bottom .header__button {
+    width: 45%;
+    padding: 15px;
+  }
 }
 
 @media (min-width: 1100px) {

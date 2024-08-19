@@ -5,7 +5,7 @@ export const Header = () => {
   return (
     <header id="header" className="header header--blur-effect">
       <div className="header__intro-text header__intro-text--stroke">HELLO</div>
-      <div className="header__container section-wrapper">
+      <div className="header__container section__wrapper">
         <div className="header__intro-column header__column header__column--blur-effect">
           <div className="header__info">
             <div className="header__info-top">
@@ -25,12 +25,12 @@ export const Header = () => {
               </p>
             </div>
             <div className="header__info-bottom">
-              <button className="header__button btn btn-primary">
+              <button className="header__button header__button--primary">
                 Download CV
               </button>
               <a
                 href="mailto:fatimaalvesa10@gmail.com"
-                className="header__button btn btn-primary"
+                className="header__button header__button--primary"
               >
                 Email Me
               </a>
