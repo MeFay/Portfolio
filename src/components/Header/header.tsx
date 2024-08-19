@@ -25,12 +25,12 @@ export const Header = () => {
               </p>
             </div>
             <div className="header__info-bottom">
-              <button className="header__button header__button--primary">
+              <button className="btn btn--primary">
                 Download CV
               </button>
               <a
                 href="mailto:fatimaalvesa10@gmail.com"
-                className="header__button header__button--primary"
+                className="btn btn--primary"
               >
                 Email Me
               </a>
