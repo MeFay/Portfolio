@@ -101,7 +101,7 @@
   background: linear-gradient(transparent, var(--ui-color-1));
 }
 
-/* RESPONSIVENESS */
+/* --- RESPONSIVENESS --- */
 @media (min-width: 1100px) {
   .header__title {
     font-size: 32px;
