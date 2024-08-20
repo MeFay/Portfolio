@@ -28,6 +28,7 @@
   text-align: center;
 }
 
+/* --- RESPONSIVENESS --- */
 @media (max-width: 1100px) {
   .fact__container .indicator {
     font-size: 32px;
@@ -38,10 +39,10 @@
 }
 
 @media (max-width: 500px) {
-    .fact__container .indicator {
-      font-size: 20px;
-    }
-    .fact__container .name {
-      font-size: 10px;
-    }
+  .fact__container .indicator {
+    font-size: 20px;
   }
+  .fact__container .name {
+    font-size: 10px;
+  }
+}
