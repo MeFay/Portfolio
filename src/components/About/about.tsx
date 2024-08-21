@@ -13,15 +13,10 @@ export const About = () => {
         <div className="section__header">
           <h2 className="primary-title">About Me</h2>
           <h1 className="title">
-            I am<span className="color-primary"> Fátima Azevedo</span>
+            Passionate about<span className="color-primary"> Front-End Development</span>
           </h1>
           <p className="text__muted description">
-            I’m a front-end developer who’s really excited about making awesome,
-            user-friendly websites. I get a kick out of turning ideas into cool,
-            interactive experiences that people can enjoy. I’m all about
-            creativity and figuring out new ways to solve problems, and I’m
-            always eager to learn and improve. Looking forward to teaming up
-            with others and bringing fresh ideas to life through code!
+            I’m dedicated to creating engaging, responsive websites and applications that deliver exceptional user experiences. With a focus on design and usability, I strive to make every project a unique and effective solution.
           </p>
         </div>
       </div>
