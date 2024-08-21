@@ -40,7 +40,8 @@
 }
 
 .header__intro-column {
-  width: 550px;
+  width: 450px;
+  max-width: 100%;
 }
 
 .header__column--blur-effect::before {
@@ -53,7 +54,7 @@
 }
 
 .header__profile-column {
-  flex: 1;
+  flex: 2;
 }
 
 .header__info-top {
@@ -73,20 +74,19 @@
 .header__description {
   font-size: 15px;
   font-weight: 500;
-  margin: 20px 0;
+  margin: 0;
 }
 
 .header__info-bottom {
   display: flex;
   align-items: center;
   gap: 30px;
-  margin-top: 40px;
 }
 
 .header__profile-photo-container {
   position: relative;
-  width: 600px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 700px;
   margin: auto;
   overflow: hidden;
 }
@@ -108,7 +108,7 @@
   }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1000px) {
   .header {
     min-height: auto;
   }
@@ -119,7 +119,8 @@
 
   .header__container {
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
+    padding: 0 10px;
   }
 
   .header__intro-text {
@@ -128,6 +129,12 @@
 
   .header__intro-column {
     width: 100%;
+    max-width: 400px;
+  }
+
+  .header__profile-photo-container {
+    width: 90%;
+    max-width: 500px;
   }
 
   .header__title,
@@ -142,7 +149,7 @@
   }
 
   .header__info-bottom .btn {
-    width: 45%;
-    padding: 15px;
+    width: 100%;
+    padding: 12px;
   }
 }

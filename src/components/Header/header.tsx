@@ -21,8 +21,8 @@ export const Header = () => {
                 I'M A <br /> FRONT-END DEV
               </h1>
               <p className="header__description text-muted">
-                I specialize in crafting intuitive user experiences that combine
-                thoughtful design with technical precision.
+                I create seamless, user-friendly interfaces that bring your
+                digital vision to life.
               </p>
             </div>
             <Facts />
