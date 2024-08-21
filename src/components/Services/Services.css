@@ -7,18 +7,18 @@
 
 #services .service-card {
   position: relative;
-  overflow: hidden;
-  border-radius: var(--border-radius-large);
-  color: var(--text-color);
-  padding: 40px 25px;
-  text-align: center;
-  cursor: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 40px 25px;
   height: 100%;
+  text-align: center;
+  cursor: auto;
+  color: var(--text-color);
   background: var(--ui-color-2);
+  border-radius: var(--border-radius-large);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
 }
 
 #services .service-card::before,
@@ -44,7 +44,6 @@
   transition: opacity 0.3s ease;
 }
 
-
 @keyframes spin {
   to {
     transform: rotate(-360deg);
@@ -60,8 +59,8 @@
   inset: 0.25rem;
   border-radius: calc(1.2rem - 0.25rem);
   z-index: -1;
-  transition: background-color 0.3s ease;
   background-color: transparent;
+  transition: background-color 0.3s ease;
 }
 
 #services .service-card:hover::after {
@@ -104,7 +103,7 @@
 }
 
 #services .service-card .title {
-  font-size: 25px;
+  font-size: 26px;
   background: linear-gradient(
     to right,
     var(--primary-color) 0%,
@@ -146,16 +145,27 @@
   background-position: right center !important;
 }
 
-/* ---RESPONSIVENESS--- */
-@media (max-width: 1000px) {
+/* RESPONSIVENESS */
+@media (max-width: 1024px) {
   #services .service-list {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-  #services .service-header {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
+
+  #services .service-card {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #services .service-list {
+    gap: 1rem;
+  }
+
+  #services .service-card {
+    width: 100%;
+    padding: 2rem 1rem;
   }
 }
