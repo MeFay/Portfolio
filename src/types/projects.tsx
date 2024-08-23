@@ -4,13 +4,13 @@ import { SiExpress, SiMongodb, SiAdobexd } from "react-icons/si";
 import { CgFigma } from "react-icons/cg";
 import { TbBrandReactNative } from "react-icons/tb";
 
-type StackItem = {
+export type StackItem = {
   name: string;
   icon: JSX.Element;
   iconColor?: string;
 };
 
-type ProjectData = {
+export type ProjectData = {
   description: string;
   demoLink: string;
 };
@@ -22,6 +22,16 @@ export type Project = {
   category: string;
   data: ProjectData;
   stack: StackItem[];
+};
+
+export type ProjectsCardProps = {
+  image: string;
+  title: string;
+  data: {
+    description: string;
+  };
+  stack: StackItem[];
+  demoLink: string;
 };
 
 export const projects: Project[] = [
