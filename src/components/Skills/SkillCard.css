@@ -1,5 +1,5 @@
 .skill__card {
-  padding: 20px 40px;
+  padding: 20px 20px;
   border: 4px solid transparent;
   transition: var(--transition);
   border-radius: var(--border-radius-large);
@@ -14,8 +14,12 @@
 .skill__card h3 {
   text-align: center;
   padding: 15px;
-  color: var(--primary-color);
   font-size: 22px;
+  background: var(--fourth-color-shade-1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .skill__card .skill__content {
@@ -26,11 +30,15 @@
 
 .skill__card .skill__details {
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .skill__card .skill__icon {
   color: var(--primary-color);
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
 }
 
 .skill__card .skill__details .skill__name {
@@ -47,7 +55,7 @@
     font-size: 12px;
   }
 
-  .skill__card .skill__details.skill__level {
+  .skill__card .skill__details .skill__level {
     font-size: 10px;
   }
 }

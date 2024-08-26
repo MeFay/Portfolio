@@ -2,8 +2,13 @@
 
 :root {
   /* COLORS */
-  --primary-color: #8750f7;
+  --primary-color: #9b27fa;
   --secondary-color: rgba(28, 20, 5, 0.775);
+  --third-color: #e7975a;
+  --fourth-color: #3e16c1;
+  --primary-color-shade-1: #a136f7;
+  --primary-color-shade-2: #ec8cec;
+  --fourth-color-shade-1: #64dfdf;
   --text-color: #f8f7ff;
   --muted-color: #9fa5a5;
   --white-color: #fefcfb;
@@ -26,6 +31,21 @@
   --gradient-1: linear-gradient(
     260deg,
     var(--secondary-color) 0%,
+    var(--primary-color) 100%
+  );
+  --gradient-2: linear-gradient(
+    260deg,
+    var(--primary-color) 0%,
+    var(--third-color) 100%
+  );
+  --gradient-3: linear-gradient(
+    260deg,
+    var(--third-color) 0%,
+    var(--primary-color) 100%
+  );
+  --gradient-4: linear-gradient(
+    260deg,
+    var(--fourth-color) 0%,
     var(--primary-color) 100%
   );
   --transition: all 400ms ease;
@@ -78,18 +98,21 @@ h6 {
   margin: 0;
   background: linear-gradient(
     to right,
-    var(--primary-color) 0%,
-    var(--white-color) 100%
+    var(--primary-color) 40%,
+    var(--primary-color-shade-2) 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.color-primary {
+.primary-color {
   color: var(--primary-color);
 }
 
+.fourth-color-shade-1 {
+  color: var(--fourth-color-shade-1);
+}
 .text-muted {
   color: var(--muted-color);
 }
@@ -128,14 +151,22 @@ img {
 }
 
 .btn--primary {
-  background: var(--gradient-1);
+  background: var(--gradient-3);
   color: var(--white-color);
   background-size: 200% auto;
   transition: var(--transition);
 }
 
-.btn--primary:hover {
-  background-position: right center;
+.btn--secundary {
+  background: var(--gradient-4);
+  color: var(--white-color);
+  background-size: 200% auto;
+  transition: var(--transition);
+}
+
+.btn--primary:hover,
+.btn--secundary:hover {
+  background-position: center right;
 }
 
 /* SECTIONS */
@@ -155,7 +186,6 @@ img {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
 }
 
 .section__header--center .section__title,

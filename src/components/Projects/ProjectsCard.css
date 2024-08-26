@@ -80,7 +80,6 @@
   border-radius: var(--border-radius);
   background-color: rgba(var(--primary-color-rgb), 0.1);
   border: 1px solid rgba(var(--primary-color-rgb), 0.3);
-  color: var(--primary-color);
 }
 
 .project-card__stack-icon {
@@ -103,9 +102,4 @@
   text-align: center;
   cursor: pointer;
   text-decoration: none;
-}
-
-.btn--primary {
-  background-color: var(--primary-color);
-  color: white;
 }

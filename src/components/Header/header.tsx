@@ -11,7 +11,7 @@ export const Header = () => {
           <div className="header__info">
             <div className="header__info-top">
               Hello there! I'm
-              <span className="header__info-name color-primary">
+              <span className="header__info-name fourth-color-shade-1">
                 {" "}
                 Fátima Azevedo
               </span>
