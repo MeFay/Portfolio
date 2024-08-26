@@ -106,8 +106,8 @@
   font-size: 26px;
   background: linear-gradient(
     to right,
-    var(--primary-color) 0%,
-    var(--white-color) 100%
+    var(--primary-color-shade-1) 0%,
+    var(--primary-color-shade-2) 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -134,7 +134,7 @@
 #services .service-card .btn.btn--primary {
   background: linear-gradient(
     260deg,
-    var(--secondary-color) 0%,
+    var(--fourth-color) 0%,
     var(--primary-color) 100%
   );
   background-size: 200% auto;

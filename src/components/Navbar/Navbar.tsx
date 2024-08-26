@@ -43,7 +43,7 @@ export const Navbar = () => {
         ))}
       </div>
       <div className="navbar__actions">
-        <button className="btn btn--primary">
+        <button className="btn btn--secundary">
           Hire me <FaArrowUpRightFromSquare />
         </button>
         <FaBarsStaggered

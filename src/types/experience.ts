@@ -10,7 +10,7 @@ export type ExperienceCategory = {
 
 export const experience: ExperienceCategory[] = [
   {
-    title: "UI/UX",
+    title: "UI/UX Design",
     data: [
       { skill: "Figma", level: "Intermediate" },
       { skill: "Sketch", level: "Novice" },
