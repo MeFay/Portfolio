@@ -8,7 +8,7 @@
   --fourth-color: #3e16c1;
   --primary-color-shade-1: #a136f7;
   --primary-color-shade-2: #ec8cec;
-  --fourth-color-shade-1: #64dfdf;
+  --fourth-color-shade-1: #48bfe3;
   --text-color: #f8f7ff;
   --muted-color: #9fa5a5;
   --white-color: #fefcfb;
@@ -45,8 +45,8 @@
   );
   --gradient-4: linear-gradient(
     260deg,
-    var(--fourth-color) 0%,
-    var(--primary-color) 100%
+    var(--primary-color) 0%,
+    var(--fourth-color-shade-1) 100%
   );
   --transition: all 400ms ease;
 }
