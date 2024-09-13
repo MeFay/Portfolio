@@ -121,24 +121,31 @@
     min-height: 100vh;
     background: var(--ui-color-1);
     top: 0;
-    left: -100%;
+    right: -100%;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
+    justify-content: center;
+    align-items: center;
     z-index: 200;
     transition: var(--transition);
     padding-top: 20px;
   }
 
   .navbar__tabs--visible {
-    left: 0;
+    right: 0;
   }
 
   .navbar__menu-icon {
     display: block;
+    font-size: 25px;
+    cursor: pointer;
   }
 
   .navbar__close-icon {
     display: flex;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
   }
 }

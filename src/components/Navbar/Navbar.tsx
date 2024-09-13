@@ -9,6 +9,13 @@ import { FaTimes } from "react-icons/fa";
 export const Navbar = () => {
   const [showSideBar, setShowSidebar] = useState(false);
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <nav className="navbar">
       {showSideBar ? (
@@ -16,11 +23,18 @@ export const Navbar = () => {
           className="navbar__overlay"
           onClick={() => setShowSidebar(!showSideBar)}
         ></div>
-      ) : ""}
-      <div className="navbar__logo">
+      ) : (
+        ""
+      )}
+      <div
+        className="navbar__logo"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      >
         <img src={Logo} alt="Logo" />
       </div>
-      <div className={`navbar__tabs ${showSideBar ? "navbar__tabs--visible" : ""}`}>
+      <div
+        className={`navbar__tabs ${showSideBar ? "navbar__tabs--visible" : ""}`}
+      >
         <span
           className="navbar__close-icon"
           onClick={() => setShowSidebar(!showSideBar)}
@@ -43,7 +57,7 @@ export const Navbar = () => {
         ))}
       </div>
       <div className="navbar__actions">
-        <button className="btn btn--secundary">
+        <button className="btn btn--secundary" onClick={scrollToContact}>
           Hire me <FaArrowUpRightFromSquare />
         </button>
         <FaBarsStaggered

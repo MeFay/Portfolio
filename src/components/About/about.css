@@ -1,11 +1,25 @@
 #about {
   background: var(--ui-color-2);
+  overflow: hidden;
 }
 
 #about .about__container {
   display: grid;
   grid-template-columns: 400px auto;
   gap: 40px;
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+#about .about__container.animate {
+  animation: slideInLeft 2s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 #about .me__container.blur-effect::before {
@@ -36,7 +50,7 @@
   margin-top: 30px;
 }
 
-/* --- RESPONSIVENESS --- */
+/* RESPONSIVENESS */
 @media (max-width: 850px) {
   #about .about__container {
     grid-template-columns: 100%;
