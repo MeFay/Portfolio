@@ -1,11 +1,37 @@
-import { FaPaintbrush } from "react-icons/fa6";
-import "./Services.css";
-import { BsCodeSquare } from "react-icons/bs";
-import { MdSpeed } from "react-icons/md";
+import { useEffect, useRef } from 'react';
+import { FaPaintbrush } from 'react-icons/fa6';
+import { BsCodeSquare } from 'react-icons/bs';
+import { MdSpeed } from 'react-icons/md';
+import './Services.css';
 
 export const Services = () => {
+  const servicesRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const currentRef = servicesRef.current;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && currentRef) {
+          currentRef.classList.add('animate');
+        }
+      },
+      { threshold: 0.4 }
+    );
+
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []);
+
   return (
-    <section id="services">
+    <section id="services" ref={servicesRef}>
       <div className="section__wrapper services__wrapper">
         <div className="section__header section__header--center">
           <h2 className="primary-title">Services</h2>
